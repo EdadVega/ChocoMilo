@@ -9,7 +9,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
-    public AdminSQLiteOpenHelper(@Nullable View.OnClickListener context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public AdminSQLiteOpenHelper(@Nullable Context  context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super((Context) context, name, factory, version);
     }
 
