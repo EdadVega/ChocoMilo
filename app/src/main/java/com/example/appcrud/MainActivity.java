@@ -85,10 +85,10 @@ public class MainActivity extends AppCompatActivity {
                     contador.close();
 
                     // Modificación: Establecer el mensaje en el TextView
-                    mensajeTextView.setText("Existe " + cantidadRegistros + " ejemplares disponibles con ID: " + codigo);
+                    mensajeTextView.setText("Existe " + cantidadRegistros + " del ID: " + codigo);
                 } else {
                     // Modificación: Establecer el mensaje en el TextView
-                    mensajeTextView.setText("No existen ejemplares disponibles");
+                    mensajeTextView.setText("No Hay libros disponibles");
                 }
 
                 BaseDeDatos.close();
@@ -109,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (!codigo.isEmpty() && !descripcion.isEmpty() && !precio.isEmpty()) {
                 ContentValues registro = new ContentValues();
+                registro.put("codigo",codigo);
                 registro.put("descripcion", descripcion);
                 registro.put("precio", precio);
 
